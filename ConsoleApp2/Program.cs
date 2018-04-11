@@ -27,12 +27,12 @@ namespace Shadow_Android
         public async Task StartAsync()
         {
             _client = new DiscordSocketClient();
-            
 
+            string token = System.IO.File.ReadAllText(@"token.txt");//Read token from text file.
 
             new CommandHandler();
 
-            await _client.LoginAsync(TokenType.Bot, "MzQwMDAwNjUxODc2NjMwNTI4.DLjagg.ztDCFFSSSeWsjEbS-a_tudWQlrs");//Token goes here TODO: MAKE TOKEN READ FROM TEXT FILE.
+            await _client.LoginAsync(TokenType.Bot, token);
 
             await _client.StartAsync();
 
