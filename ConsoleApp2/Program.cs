@@ -32,7 +32,7 @@ namespace Shadow_Android
 
             new CommandHandler();
 
-            await _client.LoginAsync(TokenType.Bot, "MzQwMDAwNjUxODc2NjMwNTI4.DLjagg.ztDCFFSSSeWsjEbS-a_tudWQlrs");//Token goes here
+            await _client.LoginAsync(TokenType.Bot, "MzQwMDAwNjUxODc2NjMwNTI4.DLjagg.ztDCFFSSSeWsjEbS-a_tudWQlrs");//Token goes here TODO: MAKE TOKEN READ FROM TEXT FILE.
 
             await _client.StartAsync();
 

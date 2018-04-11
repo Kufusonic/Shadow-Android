@@ -41,16 +41,27 @@ namespace Shadow_Android
 
             _client.UserLeft += usergone;
 
+            _client.UserBanned += GotBanned;
+
 
 
 
         }
 
 
+
+        private async Task GotBanned(SocketUser u, SocketGuild g)
+        {
+            var ch = _client.GetChannel(367828009371172875) as ISocketMessageChannel;
+            await ch.SendMessageAsync(u.Mention + " has been banned, PASTA LA VISTA, BAYBEEE!");
+
+        }
+
+
         private async Task usergone(SocketUser u)
         {
-            var ch = _client.GetChannel(201595037535043585) as ISocketMessageChannel;
-            await ch.SendMessageAsync(u.Mention+" has left the server.");
+            var ch = _client.GetChannel(339293367659659264) as ISocketMessageChannel;
+            await ch.SendMessageAsync(u.Mention+ " has left the server. Bye, Felicia.");
 
         }
 
